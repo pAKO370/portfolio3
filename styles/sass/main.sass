@@ -1,0 +1,685 @@
+.clearfix::before,.clearfix::after 
+	content: " "
+	display: table
+
+html, body
+	width: 100%
+	height: 100%
+	.wrapper
+		overflow: hidden
+		//height: 1000px
+		position: relative
+		.header
+			width: 100%
+			overflow: hidden
+			position: relative
+			//background: blue
+			top: 0
+			height: calc(100vh)
+			.nav
+				height: 60px
+				width: 100vw
+				position: absolute
+				top: 0
+				left: 0
+				background: white
+				z-index: 9
+				.wide
+					display: none
+				#msn
+					position: absolute
+					max-height: 25px
+					top: calc(50% - 12.5px)
+					left: 10px
+					z-index: 5
+				.hamburger
+					position: absolute
+					right: 0
+					top: 4px
+					z-index: 10
+			.test
+				position: relative
+				width: 100%
+				height: auto
+				margin-top: -160px
+				background: RGBA(34, 34, 34, 1.00)
+				color: white
+				z-index: 3
+				font-family: 'Source Sans Pro', sans-serif
+				font-weight: 700
+				transition: margin-top 500ms ease-in-out 
+				//overflow: hidden
+				//display: none
+				ul
+					padding: 45px 0 10px 0px
+				a
+					color: white
+					text-decoration: none
+				li
+					position: relative
+					height: 40px
+					list-style: none
+					text-align: left
+					margin: 0
+					font-size: 1.7rem
+					font-weight: 900
+					padding-left: 30px
+					.arrow-down
+						position: absolute
+						top: -12px
+						right: 30px
+						font-size: 3rem
+						transform: rotate(180deg)
+					.ion-social-facebook,.ion-social-twitter,.ion-social-github,.ion-social-linkedin
+						margin-right: 10px
+				&.active
+					display: block
+					margin-top: 50px
+				.about-li
+					background: black
+					padding: 0
+					transition: color 200ms ease-in
+					transform-origin: top
+					transform: scale(0)
+					color: black
+					height: 0
+					&.show-li
+						padding: 10px 0 8px 65px
+						transform: scale(1)
+						height: auto
+						color: white
+				.coach-li
+					background: black
+					padding: 0
+					transition: color 200ms ease-in
+					transform-origin: top
+					transform: scale(0)
+					color: black
+					height: 0
+					&.show-li
+						padding: 8px 0 7px 65px
+						transform: scale(1)
+						height: auto
+						color: white
+			.overlay
+				background: 
+					color: rgba(0,0,0,0)
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: calc(100vh)
+				z-index: 2
+			.header-imgs
+				position: relative
+				width: 1500px
+				height: calc(100vh + 350px)
+				z-index: -2
+				left: calc(50% - 870px)
+				margin-top: -200px
+				//transform: translateX(-50%)
+			h1
+				position: absolute
+				top: calc(50% - 40px)
+				z-index: 2
+				color: white
+				width: 100%
+				text-align: center
+				font-size: 4rem
+				font-family: 'Source Sans Pro', sans-serif
+				font-weight: 800
+				//text-decoration: underline
+				text-transform: uppercase
+			.fed
+				color: RGBA(233, 64, 55, 1.00)
+				font-size: 2.1rem
+				font-weight: 400
+				position: absolute
+				z-index: 2
+				top: calc(50% + 10px)
+				width: 100%
+				text-align: center
+				text-transform: uppercase
+
+		.info
+			//display: none
+			z-index: 1
+			position: relative
+			width: 100%
+			padding: 50px 5px 20px 5px
+			box-shadow: 0 0 10px gray
+			h1
+				padding: 0
+				width: 100%
+				text-align: center
+				font-family: 'Raleway', sans-serif
+				font-weight: 800
+			img
+				position: absolute
+				height: 200px
+				width: 400px
+				left: 50%
+				transform: translateX(-50%)
+				top: calc(50% - 100px)
+				opacity: .1
+				z-index: -2
+			p
+				font-size: 2.2rem
+				z-index: 12
+				color: RGBA(36, 45, 53, 1.00)
+				font-family: 'Raleway', sans-serif
+				font-weight: 400
+				padding: 20px 20px 50px 20px
+		.image-info
+			h1
+				padding: 20px
+				width: 100%
+				text-align: center
+				font-family: 'Raleway', sans-serif
+				font-weight: 800
+			.center
+				.image
+					position: relative
+					width: 100%
+					min-height: 280px
+					max-height: 280px
+					img
+						position: absolute
+						height: 100%
+						left: 50%
+						transform: translateX(-50%)
+				.info-sec
+					min-height: 310px
+					max-height: 310px
+				.srg
+					padding: 70px 5px
+					background: RGBA(255, 250, 237, 1.00)
+					h3
+						font-size: 2.5rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+				.fry
+					padding: 70px 5px
+					background: RGBA(36, 45, 53, 1.00)
+					h3
+						width: 100%
+						font-size: 2.5rem
+						z-index: 12
+						color: RGBA(250,250,250, 1.00)
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: RGBA(255, 250, 250, 1.00)
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+				.ment
+					padding: 70px 5px
+					background: RGBA(213, 100, 44, 1.00)
+					h3
+						font-size: 2.5rem
+						z-index: 12
+						color: RGBA(255, 250, 250, 1.00)
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: RGBA(255, 250, 250, 1.00)
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+				.time
+					padding: 70px 5px
+					background: RGBA(255, 250, 250, 1.00)
+					h3
+						font-size: 2.5rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+				.kirra
+					padding: 70px 5px
+					background: RGBA(48, 114, 171, 1.00)
+					h3
+						font-size: 2.5rem
+						z-index: 12
+						color: white
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: white
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+				.jams
+					padding: 70px 5px
+					background: RGBA(255, 250, 237, 1.00)
+					h3
+						font-size: 2.5rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 600	
+						margin-top: 0
+						text-align: center
+					p
+						font-size: 2.2rem
+						z-index: 12
+						color: RGBA(36, 45, 53, 1.00)
+						font-family: 'Raleway', sans-serif
+						font-weight: 400
+						padding: 10px 20px
+		.footer
+			width: 100%
+			height: 50px
+			background: RGBA(27, 29, 31, 1.00)
+	@media only screen and (min-width: 500px)
+		.wrapper
+			overflow: hidden
+			max-width: 1400px
+			margin: 0 auto
+			box-shadow: 0px 0px 20px gray
+			//height: 1000px
+			.header
+				width: 100%
+				overflow: hidden
+				position: relative
+				//background: blue
+				top: 0
+				height: calc(100vh)
+				.nav
+					height: 60px
+					width: 100vw
+					position: relative
+					top: 0
+					background: white
+					z-index: 9
+					.wide
+						display: none
+					#msn
+						position: absolute
+						max-height: 25px
+						top: calc(50% - 12.5px)
+						left: 20px
+						z-index: 5
+						margin-left: 10px
+					.hamburger
+						position: absolute
+						right: 0
+						top: 4px
+						z-index: 10
+				.test
+					position: relative
+					width: 100%
+					height: auto
+					margin-top: -220px
+					background: RGBA(34, 34, 34, 1.00)
+					color: white
+					z-index: 3
+					font-family: 'Source Sans Pro', sans-serif
+					font-weight: 700
+					transition: margin-top 500ms ease-in-out 
+					//overflow: hidden
+					//display: none
+					ul
+						padding: 45px 0 10px 0px
+					a
+						color: white
+						text-decoration: none
+					li
+						position: relative
+						height: 40px
+						list-style: none
+						text-align: left
+						margin: 0
+						font-size: 1.7rem
+						font-weight: 900
+						padding-left: 30px
+						.arrow-down
+							position: absolute
+							top: -12px
+							right: 30px
+							font-size: 3rem
+							transform: rotate(180deg)
+						.ion-social-facebook,.ion-social-twitter,.ion-social-github,.ion-social-linkedin
+							margin-right: 10px
+					&.active
+						display: block
+						margin-top: 0px
+					.about-li
+						background: black
+						padding: 0
+						transition: color 200ms ease-in
+						transform-origin: top
+						transform: scale(0)
+						color: black
+						height: 0
+						&.show-li
+							padding: 10px 0 8px 65px
+							transform: scale(1)
+							height: auto
+							color: white
+					.coach-li
+						background: black
+						padding: 0
+						transition: color 200ms ease-in
+						transform-origin: top
+						transform: scale(0)
+						color: black
+						height: 0
+						&.show-li
+							padding: 8px 0 7px 65px
+							transform: scale(1)
+							height: auto
+							color: white
+				.overlay
+					background: 
+						color: rgba(0,0,0,0)
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: calc(100vh)
+					z-index: 2
+				.header-imgs
+					position: relative
+					width: 100%
+					z-index: -2
+					left: 0
+					margin-top: -200px
+					//transform: translateX(-50%)
+				h1
+					position: absolute
+					top: calc(50% - 40px)
+					z-index: 2
+					color: white
+					width: 100%
+					text-align: center
+					font-size: 7rem
+					font-family: 'Source Sans Pro', sans-serif
+					font-weight: 800
+					//text-decoration: underline
+					text-transform: uppercase
+				.fed
+					color: RGBA(233, 64, 55, 1.00)
+					font-size: 3.1rem
+					font-weight: 400
+					position: absolute
+					z-index: 2
+					top: calc(50% + 60px)
+					width: 100%
+					text-align: center
+					text-transform: uppercase
+
+			.info
+				//display: none
+				z-index: 1
+				position: relative
+				width: 100%
+				padding: 50px 5px 20px 5px
+				box-shadow: 0 0 10px gray
+				img
+					position: absolute
+					height: 200px
+					width: 400px
+					left: 50%
+					transform: translateX(-50%)
+					top: calc(50% - 70px)
+					opacity: .1
+					z-index: -2
+				p
+					font-size: 2.2rem
+					z-index: 12
+					color: RGBA(36, 45, 53, 1.00)
+					font-family: 'Raleway', sans-serif
+					font-weight: 400
+					padding: 20px 80px 40px 80px
+			.image-info
+				h1
+					padding: 20px
+					width: 100%
+					text-align: center
+					font-family: 'Raleway', sans-serif
+					font-weight: 800
+				.center
+					.image
+						position: relative
+						width: 50%
+						min-height: 350px
+						max-height: 350px
+						margin: 0
+						float: left
+						overflow: hidden
+						padding: 0
+						img
+							width: 100%
+							position: absolute
+							height: 100%
+							left: 50%
+							transform: translateX(-50%)
+					#right
+						float: right
+					.info-sec
+						float: right
+						width: 50%
+						min-height: 350px
+						max-height: 350px
+					.srg
+						padding: 20px 35px
+						background: RGBA(255, 250, 237, 1.00)
+						h3
+							font-size: 3rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Source Sans Pro', sans-serif
+							font-weight: 600	
+							margin-top: 0
+							text-align: center
+						p
+							font-size: 1.9rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+					.fry
+						padding: 40px 35px
+						background: RGBA(36, 45, 53, 1.00)
+						float: left
+						h3
+							font-size: 3.5rem
+						p
+							font-size: 2.2rem
+							z-index: 12
+							color: RGBA(255, 250, 250, 1.00)
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+					.ment
+						padding: 60px 35px
+						background: RGBA(213, 100, 44, 1.00)
+						h3
+							font-size: 3.5rem
+							z-index: 12
+							color: RGBA(255, 250, 250, 1.00)
+							font-family: 'Source Sans Pro', sans-serif
+							font-weight: 600	
+							margin-top: 0
+							text-align: center
+						p
+							font-size: 2.2rem
+							z-index: 12
+							color: RGBA(255, 250, 250, 1.00)
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+					.time
+						padding: 30px 35px
+						background: RGBA(255, 250, 250, 1.00)
+						h3
+							font-size: 3rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Source Sans Pro', sans-serif
+							font-weight: 600	
+							margin-top: 0
+							text-align: center
+						p
+							font-size: 1.9rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+					.kirra
+						padding: 40px 35px
+						h3
+							font-size: 3rem
+							z-index: 12
+							font-family: 'Source Sans Pro', sans-serif
+							font-weight: 600	
+							margin-top: 0
+							text-align: center
+						p
+							font-size: 2.2rem
+							z-index: 12
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+					.jams
+						padding: 50px 35px
+						h3
+							font-size: 3.5rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Source Sans Pro', sans-serif
+							font-weight: 600	
+							margin-top: 0
+							text-align: center
+						p
+							font-size: 2.2rem
+							z-index: 12
+							color: RGBA(36, 45, 53, 1.00)
+							font-family: 'Raleway', sans-serif
+							font-weight: 400
+							padding: 10px 20px
+	@media only screen and (min-width: 850px)
+		.wrapper
+			.header
+				.nav
+					position: fixed
+					width: 100%
+					max-width: 1400px
+					left: 50%
+					transform: translateX(-50%)
+					box-shadow: 0 0 20px gray
+					.wide
+						display: block
+						position: absolute
+						top: 15%
+						right: 0px
+						width: 800px
+						height: auto
+						color: black
+						z-index: 3
+						font-family: 'Source Sans Pro', sans-serif
+						font-weight: 700
+						transition: margin-top 500ms ease-in-out 
+						//overflow: hidden
+						//display: none
+						.ion-social-facebook,.ion-social-twitter,.ion-social-github,.ion-social-linkedin
+							margin-right: 10px
+						ul
+							position: absolute
+							padding: 9px 0 10px 0px
+							a
+								color: black
+								text-decoration: none
+							li
+								position: relative
+								height: 40px
+								list-style: none
+								text-align: left
+								margin: 0
+								font-size: 1.7rem
+								font-weight: 900
+								padding-left: 30px
+								float: left
+				.hamburger
+					display: none
+			.test
+				display: none
+			.info
+				//display: none
+				z-index: 1
+				position: relative
+				width: 100%
+				padding: 50px 5px 20px 5px
+				box-shadow: 0 0 10px gray
+				img
+					position: absolute
+					height: 175px
+					width: 400px
+					left: 50%
+					transform: translateX(-50%)
+					top: calc(50% - 70px)
+					opacity: .1
+					z-index: -2
+				p
+					font-size: 2.5rem
+					z-index: 12
+					color: RGBA(36, 45, 53, 1.00)
+					font-family: 'Raleway', sans-serif
+					font-weight: 400
+					padding: 60px 140px 100px 140px
+			.image-info
+				.center
+					.image
+						min-height: 450px
+						max-height: 450px
+					.info-sec
+						min-height: 450px
+						max-height: 450px
+					.srg
+						padding: 150px 35px
+					.fry
+						padding: 150px 35px
+					.ment
+						padding: 150px 35px
+					.time
+						padding: 150px 35px
+					.kirra
+						padding: 150px 35px
+					.jams
+						padding: 150px 35px

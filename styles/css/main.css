@@ -1,0 +1,656 @@
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+  html .wrapper, body .wrapper {
+    overflow: hidden;
+    position: relative; }
+    html .wrapper .header, body .wrapper .header {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      top: 0;
+      height: calc(100vh); }
+      html .wrapper .header .nav, body .wrapper .header .nav {
+        height: 60px;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 9; }
+        html .wrapper .header .nav .wide, body .wrapper .header .nav .wide {
+          display: none; }
+        html .wrapper .header .nav #msn, body .wrapper .header .nav #msn {
+          position: absolute;
+          max-height: 25px;
+          top: calc(50% - 12.5px);
+          left: 10px;
+          z-index: 5; }
+        html .wrapper .header .nav .hamburger, body .wrapper .header .nav .hamburger {
+          position: absolute;
+          right: 0;
+          top: 4px;
+          z-index: 10; }
+      html .wrapper .header .test, body .wrapper .header .test {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: -160px;
+        background: RGBA(34, 34, 34, 1);
+        color: white;
+        z-index: 3;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+        transition: margin-top 500ms ease-in-out; }
+        html .wrapper .header .test ul, body .wrapper .header .test ul {
+          padding: 45px 0 10px 0px; }
+        html .wrapper .header .test a, body .wrapper .header .test a {
+          color: white;
+          text-decoration: none; }
+        html .wrapper .header .test li, body .wrapper .header .test li {
+          position: relative;
+          height: 40px;
+          list-style: none;
+          text-align: left;
+          margin: 0;
+          font-size: 1.7rem;
+          font-weight: 900;
+          padding-left: 30px; }
+          html .wrapper .header .test li .arrow-down, body .wrapper .header .test li .arrow-down {
+            position: absolute;
+            top: -12px;
+            right: 30px;
+            font-size: 3rem;
+            transform: rotate(180deg); }
+          html .wrapper .header .test li .ion-social-facebook, html .wrapper .header .test li .ion-social-twitter, html .wrapper .header .test li .ion-social-github, html .wrapper .header .test li .ion-social-linkedin, body .wrapper .header .test li .ion-social-facebook, body .wrapper .header .test li .ion-social-twitter, body .wrapper .header .test li .ion-social-github, body .wrapper .header .test li .ion-social-linkedin {
+            margin-right: 10px; }
+        html .wrapper .header .test.active, body .wrapper .header .test.active {
+          display: block;
+          margin-top: 50px; }
+        html .wrapper .header .test .about-li, body .wrapper .header .test .about-li {
+          background: black;
+          padding: 0;
+          transition: color 200ms ease-in;
+          transform-origin: top;
+          transform: scale(0);
+          color: black;
+          height: 0; }
+          html .wrapper .header .test .about-li.show-li, body .wrapper .header .test .about-li.show-li {
+            padding: 10px 0 8px 65px;
+            transform: scale(1);
+            height: auto;
+            color: white; }
+        html .wrapper .header .test .coach-li, body .wrapper .header .test .coach-li {
+          background: black;
+          padding: 0;
+          transition: color 200ms ease-in;
+          transform-origin: top;
+          transform: scale(0);
+          color: black;
+          height: 0; }
+          html .wrapper .header .test .coach-li.show-li, body .wrapper .header .test .coach-li.show-li {
+            padding: 8px 0 7px 65px;
+            transform: scale(1);
+            height: auto;
+            color: white; }
+      html .wrapper .header .overlay, body .wrapper .header .overlay {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh);
+        z-index: 2; }
+      html .wrapper .header .header-imgs, body .wrapper .header .header-imgs {
+        position: relative;
+        width: 1500px;
+        height: calc(100vh + 350px);
+        z-index: -2;
+        left: calc(50% - 870px);
+        margin-top: -200px; }
+      html .wrapper .header h1, body .wrapper .header h1 {
+        position: absolute;
+        top: calc(50% - 40px);
+        z-index: 2;
+        color: white;
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase; }
+      html .wrapper .header .fed, body .wrapper .header .fed {
+        color: RGBA(233, 64, 55, 1);
+        font-size: 2.1rem;
+        font-weight: 400;
+        position: absolute;
+        z-index: 2;
+        top: calc(50% + 10px);
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase; }
+    html .wrapper .info, body .wrapper .info {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      padding: 50px 5px 20px 5px;
+      box-shadow: 0 0 10px gray; }
+      html .wrapper .info h1, body .wrapper .info h1 {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-weight: 800; }
+      html .wrapper .info img, body .wrapper .info img {
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(50% - 100px);
+        opacity: 0.1;
+        z-index: -2; }
+      html .wrapper .info p, body .wrapper .info p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 20px 20px 50px 20px; }
+    html .wrapper .image-info h1, body .wrapper .image-info h1 {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-weight: 800; }
+    html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
+      position: relative;
+      width: 100%;
+      min-height: 280px;
+      max-height: 280px; }
+      html .wrapper .image-info .center .image img, body .wrapper .image-info .center .image img {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%); }
+    html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
+      min-height: 310px;
+      max-height: 310px; }
+    html .wrapper .image-info .center .srg, body .wrapper .image-info .center .srg {
+      padding: 70px 5px;
+      background: RGBA(255, 250, 237, 1); }
+      html .wrapper .image-info .center .srg h3, body .wrapper .image-info .center .srg h3 {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .srg p, body .wrapper .image-info .center .srg p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .image-info .center .fry, body .wrapper .image-info .center .fry {
+      padding: 70px 5px;
+      background: RGBA(36, 45, 53, 1); }
+      html .wrapper .image-info .center .fry h3, body .wrapper .image-info .center .fry h3 {
+        width: 100%;
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(250, 250, 250, 1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .fry p, body .wrapper .image-info .center .fry p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(255, 250, 250, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .image-info .center .ment, body .wrapper .image-info .center .ment {
+      padding: 70px 5px;
+      background: RGBA(213, 100, 44, 1); }
+      html .wrapper .image-info .center .ment h3, body .wrapper .image-info .center .ment h3 {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(255, 250, 250, 1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .ment p, body .wrapper .image-info .center .ment p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(255, 250, 250, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .image-info .center .time, body .wrapper .image-info .center .time {
+      padding: 70px 5px;
+      background: RGBA(255, 250, 250, 1); }
+      html .wrapper .image-info .center .time h3, body .wrapper .image-info .center .time h3 {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .time p, body .wrapper .image-info .center .time p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .image-info .center .kirra, body .wrapper .image-info .center .kirra {
+      padding: 70px 5px;
+      background: RGBA(48, 114, 171, 1); }
+      html .wrapper .image-info .center .kirra h3, body .wrapper .image-info .center .kirra h3 {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: white;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .kirra p, body .wrapper .image-info .center .kirra p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .image-info .center .jams, body .wrapper .image-info .center .jams {
+      padding: 70px 5px;
+      background: RGBA(255, 250, 237, 1); }
+      html .wrapper .image-info .center .jams h3, body .wrapper .image-info .center .jams h3 {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+        text-align: center; }
+      html .wrapper .image-info .center .jams p, body .wrapper .image-info .center .jams p {
+        font-size: 2.2rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 10px 20px; }
+    html .wrapper .footer, body .wrapper .footer {
+      width: 100%;
+      height: 50px;
+      background: RGBA(27, 29, 31, 1); }
+  @media only screen and (min-width: 500px) {
+    html .wrapper, body .wrapper {
+      overflow: hidden;
+      max-width: 1400px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 20px gray; }
+      html .wrapper .header, body .wrapper .header {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        height: calc(100vh); }
+        html .wrapper .header .nav, body .wrapper .header .nav {
+          height: 60px;
+          width: 100vw;
+          position: relative;
+          top: 0;
+          background: white;
+          z-index: 9; }
+          html .wrapper .header .nav .wide, body .wrapper .header .nav .wide {
+            display: none; }
+          html .wrapper .header .nav #msn, body .wrapper .header .nav #msn {
+            position: absolute;
+            max-height: 25px;
+            top: calc(50% - 12.5px);
+            left: 20px;
+            z-index: 5;
+            margin-left: 10px; }
+          html .wrapper .header .nav .hamburger, body .wrapper .header .nav .hamburger {
+            position: absolute;
+            right: 0;
+            top: 4px;
+            z-index: 10; }
+        html .wrapper .header .test, body .wrapper .header .test {
+          position: relative;
+          width: 100%;
+          height: auto;
+          margin-top: -220px;
+          background: RGBA(34, 34, 34, 1);
+          color: white;
+          z-index: 3;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 700;
+          transition: margin-top 500ms ease-in-out; }
+          html .wrapper .header .test ul, body .wrapper .header .test ul {
+            padding: 45px 0 10px 0px; }
+          html .wrapper .header .test a, body .wrapper .header .test a {
+            color: white;
+            text-decoration: none; }
+          html .wrapper .header .test li, body .wrapper .header .test li {
+            position: relative;
+            height: 40px;
+            list-style: none;
+            text-align: left;
+            margin: 0;
+            font-size: 1.7rem;
+            font-weight: 900;
+            padding-left: 30px; }
+            html .wrapper .header .test li .arrow-down, body .wrapper .header .test li .arrow-down {
+              position: absolute;
+              top: -12px;
+              right: 30px;
+              font-size: 3rem;
+              transform: rotate(180deg); }
+            html .wrapper .header .test li .ion-social-facebook, html .wrapper .header .test li .ion-social-twitter, html .wrapper .header .test li .ion-social-github, html .wrapper .header .test li .ion-social-linkedin, body .wrapper .header .test li .ion-social-facebook, body .wrapper .header .test li .ion-social-twitter, body .wrapper .header .test li .ion-social-github, body .wrapper .header .test li .ion-social-linkedin {
+              margin-right: 10px; }
+          html .wrapper .header .test.active, body .wrapper .header .test.active {
+            display: block;
+            margin-top: 0px; }
+          html .wrapper .header .test .about-li, body .wrapper .header .test .about-li {
+            background: black;
+            padding: 0;
+            transition: color 200ms ease-in;
+            transform-origin: top;
+            transform: scale(0);
+            color: black;
+            height: 0; }
+            html .wrapper .header .test .about-li.show-li, body .wrapper .header .test .about-li.show-li {
+              padding: 10px 0 8px 65px;
+              transform: scale(1);
+              height: auto;
+              color: white; }
+          html .wrapper .header .test .coach-li, body .wrapper .header .test .coach-li {
+            background: black;
+            padding: 0;
+            transition: color 200ms ease-in;
+            transform-origin: top;
+            transform: scale(0);
+            color: black;
+            height: 0; }
+            html .wrapper .header .test .coach-li.show-li, body .wrapper .header .test .coach-li.show-li {
+              padding: 8px 0 7px 65px;
+              transform: scale(1);
+              height: auto;
+              color: white; }
+        html .wrapper .header .overlay, body .wrapper .header .overlay {
+          background-color: transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100vh);
+          z-index: 2; }
+        html .wrapper .header .header-imgs, body .wrapper .header .header-imgs {
+          position: relative;
+          width: 100%;
+          z-index: -2;
+          left: 0;
+          margin-top: -200px; }
+        html .wrapper .header h1, body .wrapper .header h1 {
+          position: absolute;
+          top: calc(50% - 40px);
+          z-index: 2;
+          color: white;
+          width: 100%;
+          text-align: center;
+          font-size: 7rem;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 800;
+          text-transform: uppercase; }
+        html .wrapper .header .fed, body .wrapper .header .fed {
+          color: RGBA(233, 64, 55, 1);
+          font-size: 3.1rem;
+          font-weight: 400;
+          position: absolute;
+          z-index: 2;
+          top: calc(50% + 60px);
+          width: 100%;
+          text-align: center;
+          text-transform: uppercase; }
+      html .wrapper .info, body .wrapper .info {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        padding: 50px 5px 20px 5px;
+        box-shadow: 0 0 10px gray; }
+        html .wrapper .info img, body .wrapper .info img {
+          position: absolute;
+          height: 200px;
+          width: 400px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: calc(50% - 70px);
+          opacity: 0.1;
+          z-index: -2; }
+        html .wrapper .info p, body .wrapper .info p {
+          font-size: 2.2rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 20px 80px 40px 80px; }
+      html .wrapper .image-info h1, body .wrapper .image-info h1 {
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+        font-weight: 800; }
+      html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
+        position: relative;
+        width: 50%;
+        min-height: 350px;
+        max-height: 350px;
+        margin: 0;
+        float: left;
+        overflow: hidden;
+        padding: 0; }
+        html .wrapper .image-info .center .image img, body .wrapper .image-info .center .image img {
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          left: 50%;
+          transform: translateX(-50%); }
+      html .wrapper .image-info .center #right, body .wrapper .image-info .center #right {
+        float: right; }
+      html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
+        float: right;
+        width: 50%;
+        min-height: 350px;
+        max-height: 350px; }
+      html .wrapper .image-info .center .srg, body .wrapper .image-info .center .srg {
+        padding: 20px 35px;
+        background: RGBA(255, 250, 237, 1); }
+        html .wrapper .image-info .center .srg h3, body .wrapper .image-info .center .srg h3 {
+          font-size: 3rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          margin-top: 0;
+          text-align: center; }
+        html .wrapper .image-info .center .srg p, body .wrapper .image-info .center .srg p {
+          font-size: 1.9rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; }
+      html .wrapper .image-info .center .fry, body .wrapper .image-info .center .fry {
+        padding: 40px 35px;
+        background: RGBA(36, 45, 53, 1);
+        float: left; }
+        html .wrapper .image-info .center .fry h3, body .wrapper .image-info .center .fry h3 {
+          font-size: 3.5rem; }
+        html .wrapper .image-info .center .fry p, body .wrapper .image-info .center .fry p {
+          font-size: 2.2rem;
+          z-index: 12;
+          color: RGBA(255, 250, 250, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; }
+      html .wrapper .image-info .center .ment, body .wrapper .image-info .center .ment {
+        padding: 60px 35px;
+        background: RGBA(213, 100, 44, 1); }
+        html .wrapper .image-info .center .ment h3, body .wrapper .image-info .center .ment h3 {
+          font-size: 3.5rem;
+          z-index: 12;
+          color: RGBA(255, 250, 250, 1);
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          margin-top: 0;
+          text-align: center; }
+        html .wrapper .image-info .center .ment p, body .wrapper .image-info .center .ment p {
+          font-size: 2.2rem;
+          z-index: 12;
+          color: RGBA(255, 250, 250, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; }
+      html .wrapper .image-info .center .time, body .wrapper .image-info .center .time {
+        padding: 30px 35px;
+        background: RGBA(255, 250, 250, 1); }
+        html .wrapper .image-info .center .time h3, body .wrapper .image-info .center .time h3 {
+          font-size: 3rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          margin-top: 0;
+          text-align: center; }
+        html .wrapper .image-info .center .time p, body .wrapper .image-info .center .time p {
+          font-size: 1.9rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; }
+      html .wrapper .image-info .center .kirra, body .wrapper .image-info .center .kirra {
+        padding: 40px 35px; }
+        html .wrapper .image-info .center .kirra h3, body .wrapper .image-info .center .kirra h3 {
+          font-size: 3rem;
+          z-index: 12;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          margin-top: 0;
+          text-align: center; }
+        html .wrapper .image-info .center .kirra p, body .wrapper .image-info .center .kirra p {
+          font-size: 2.2rem;
+          z-index: 12;
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; }
+      html .wrapper .image-info .center .jams, body .wrapper .image-info .center .jams {
+        padding: 50px 35px; }
+        html .wrapper .image-info .center .jams h3, body .wrapper .image-info .center .jams h3 {
+          font-size: 3.5rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 600;
+          margin-top: 0;
+          text-align: center; }
+        html .wrapper .image-info .center .jams p, body .wrapper .image-info .center .jams p {
+          font-size: 2.2rem;
+          z-index: 12;
+          color: RGBA(36, 45, 53, 1);
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          padding: 10px 20px; } }
+  @media only screen and (min-width: 850px) {
+    html .wrapper .header .nav, body .wrapper .header .nav {
+      position: fixed;
+      width: 100%;
+      max-width: 1400px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 20px gray; }
+      html .wrapper .header .nav .wide, body .wrapper .header .nav .wide {
+        display: block;
+        position: absolute;
+        top: 15%;
+        right: 0px;
+        width: 800px;
+        height: auto;
+        color: black;
+        z-index: 3;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+        transition: margin-top 500ms ease-in-out; }
+        html .wrapper .header .nav .wide .ion-social-facebook, html .wrapper .header .nav .wide .ion-social-twitter, html .wrapper .header .nav .wide .ion-social-github, html .wrapper .header .nav .wide .ion-social-linkedin, body .wrapper .header .nav .wide .ion-social-facebook, body .wrapper .header .nav .wide .ion-social-twitter, body .wrapper .header .nav .wide .ion-social-github, body .wrapper .header .nav .wide .ion-social-linkedin {
+          margin-right: 10px; }
+        html .wrapper .header .nav .wide ul, body .wrapper .header .nav .wide ul {
+          position: absolute;
+          padding: 9px 0 10px 0px; }
+          html .wrapper .header .nav .wide ul a, body .wrapper .header .nav .wide ul a {
+            color: black;
+            text-decoration: none; }
+          html .wrapper .header .nav .wide ul li, body .wrapper .header .nav .wide ul li {
+            position: relative;
+            height: 40px;
+            list-style: none;
+            text-align: left;
+            margin: 0;
+            font-size: 1.7rem;
+            font-weight: 900;
+            padding-left: 30px;
+            float: left; }
+    html .wrapper .header .hamburger, body .wrapper .header .hamburger {
+      display: none; }
+    html .wrapper .test, body .wrapper .test {
+      display: none; }
+    html .wrapper .info, body .wrapper .info {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      padding: 50px 5px 20px 5px;
+      box-shadow: 0 0 10px gray; }
+      html .wrapper .info img, body .wrapper .info img {
+        position: absolute;
+        height: 175px;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(50% - 70px);
+        opacity: 0.1;
+        z-index: -2; }
+      html .wrapper .info p, body .wrapper .info p {
+        font-size: 2.5rem;
+        z-index: 12;
+        color: RGBA(36, 45, 53, 1);
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 60px 140px 100px 140px; }
+    html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
+      min-height: 450px;
+      max-height: 450px; }
+    html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
+      min-height: 450px;
+      max-height: 450px; }
+    html .wrapper .image-info .center .srg, body .wrapper .image-info .center .srg {
+      padding: 150px 35px; }
+    html .wrapper .image-info .center .fry, body .wrapper .image-info .center .fry {
+      padding: 150px 35px; }
+    html .wrapper .image-info .center .ment, body .wrapper .image-info .center .ment {
+      padding: 150px 35px; }
+    html .wrapper .image-info .center .time, body .wrapper .image-info .center .time {
+      padding: 150px 35px; }
+    html .wrapper .image-info .center .kirra, body .wrapper .image-info .center .kirra {
+      padding: 150px 35px; }
+    html .wrapper .image-info .center .jams, body .wrapper .image-info .center .jams {
+      padding: 150px 35px; } }
