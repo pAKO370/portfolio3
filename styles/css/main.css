@@ -129,10 +129,20 @@ html, body {
         font-weight: 400;
         position: absolute;
         z-index: 2;
-        top: calc(50% + 10px);
+        top: calc(50% + 0px);
         width: 100%;
         text-align: center;
         text-transform: uppercase; }
+      html .wrapper .header .ion-chevron-down, body .wrapper .header .ion-chevron-down {
+        font-size: 4rem;
+        color: white;
+        position: absolute;
+        z-index: 10;
+        bottom: 10px;
+        left: calc(50% - 20px);
+        transition: all 500ms ease-in-out; }
+        html .wrapper .header .ion-chevron-down:hover, body .wrapper .header .ion-chevron-down:hover {
+          transform: translateY(-5px) scale(1.1); }
     html .wrapper .info, body .wrapper .info {
       z-index: 1;
       position: relative;
@@ -167,6 +177,14 @@ html, body {
       text-align: center;
       font-family: "Raleway", sans-serif;
       font-weight: 800; }
+    html .wrapper .image-info h5, body .wrapper .image-info h5 {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      background: white;
+      margin-top: -55px; }
     html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
       position: relative;
       width: 100%;
@@ -176,7 +194,8 @@ html, body {
         position: absolute;
         height: 100%;
         left: 50%;
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        width: 100%; }
     html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
       min-height: 310px;
       max-height: 310px; }
@@ -397,7 +416,7 @@ html, body {
           height: calc(100vh);
           z-index: 2; }
         html .wrapper .header .header-imgs, body .wrapper .header .header-imgs {
-          position: relative;
+          position: fixed;
           width: 100%;
           z-index: -2;
           left: 0;
@@ -419,11 +438,12 @@ html, body {
           font-weight: 400;
           position: absolute;
           z-index: 2;
-          top: calc(50% + 60px);
+          top: calc(50% + 35px);
           width: 100%;
           text-align: center;
           text-transform: uppercase; }
       html .wrapper .info, body .wrapper .info {
+        background: white;
         z-index: 1;
         position: relative;
         width: 100%;
@@ -445,133 +465,136 @@ html, body {
           font-family: "Raleway", sans-serif;
           font-weight: 400;
           padding: 20px 80px 40px 80px; }
-      html .wrapper .image-info h1, body .wrapper .image-info h1 {
-        padding: 20px;
-        width: 100%;
-        text-align: center;
-        font-family: "Raleway", sans-serif;
-        font-weight: 800; }
-      html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
-        position: relative;
-        width: 50%;
-        min-height: 350px;
-        max-height: 350px;
-        margin: 0;
-        float: left;
-        overflow: hidden;
-        padding: 0; }
-        html .wrapper .image-info .center .image img, body .wrapper .image-info .center .image img {
+      html .wrapper .image-info, body .wrapper .image-info {
+        background: white; }
+        html .wrapper .image-info h1, body .wrapper .image-info h1 {
+          padding: 20px;
           width: 100%;
-          position: absolute;
-          height: 100%;
-          left: 50%;
-          transform: translateX(-50%); }
-      html .wrapper .image-info .center #right, body .wrapper .image-info .center #right {
-        float: right; }
-      html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
-        float: right;
-        width: 50%;
-        min-height: 350px;
-        max-height: 350px; }
-      html .wrapper .image-info .center .srg, body .wrapper .image-info .center .srg {
-        padding: 20px 35px;
-        background: RGBA(255, 250, 237, 1); }
-        html .wrapper .image-info .center .srg h3, body .wrapper .image-info .center .srg h3 {
-          font-size: 3rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
-          margin-top: 0;
-          text-align: center; }
-        html .wrapper .image-info .center .srg p, body .wrapper .image-info .center .srg p {
-          font-size: 1.9rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
+          text-align: center;
           font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; }
-      html .wrapper .image-info .center .fry, body .wrapper .image-info .center .fry {
-        padding: 40px 35px;
-        background: RGBA(36, 45, 53, 1);
-        float: left; }
-        html .wrapper .image-info .center .fry h3, body .wrapper .image-info .center .fry h3 {
-          font-size: 3.5rem; }
-        html .wrapper .image-info .center .fry p, body .wrapper .image-info .center .fry p {
-          font-size: 2.2rem;
-          z-index: 12;
-          color: RGBA(255, 250, 250, 1);
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; }
-      html .wrapper .image-info .center .ment, body .wrapper .image-info .center .ment {
-        padding: 60px 35px;
-        background: RGBA(213, 100, 44, 1); }
-        html .wrapper .image-info .center .ment h3, body .wrapper .image-info .center .ment h3 {
-          font-size: 3.5rem;
-          z-index: 12;
-          color: RGBA(255, 250, 250, 1);
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
-          margin-top: 0;
-          text-align: center; }
-        html .wrapper .image-info .center .ment p, body .wrapper .image-info .center .ment p {
-          font-size: 2.2rem;
-          z-index: 12;
-          color: RGBA(255, 250, 250, 1);
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; }
-      html .wrapper .image-info .center .time, body .wrapper .image-info .center .time {
-        padding: 30px 35px;
-        background: RGBA(255, 250, 250, 1); }
-        html .wrapper .image-info .center .time h3, body .wrapper .image-info .center .time h3 {
-          font-size: 3rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
-          margin-top: 0;
-          text-align: center; }
-        html .wrapper .image-info .center .time p, body .wrapper .image-info .center .time p {
-          font-size: 1.9rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; }
-      html .wrapper .image-info .center .kirra, body .wrapper .image-info .center .kirra {
-        padding: 40px 35px; }
-        html .wrapper .image-info .center .kirra h3, body .wrapper .image-info .center .kirra h3 {
-          font-size: 3rem;
-          z-index: 12;
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
-          margin-top: 0;
-          text-align: center; }
-        html .wrapper .image-info .center .kirra p, body .wrapper .image-info .center .kirra p {
-          font-size: 2.2rem;
-          z-index: 12;
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; }
-      html .wrapper .image-info .center .jams, body .wrapper .image-info .center .jams {
-        padding: 50px 35px; }
-        html .wrapper .image-info .center .jams h3, body .wrapper .image-info .center .jams h3 {
-          font-size: 3.5rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
-          font-family: "Source Sans Pro", sans-serif;
-          font-weight: 600;
-          margin-top: 0;
-          text-align: center; }
-        html .wrapper .image-info .center .jams p, body .wrapper .image-info .center .jams p {
-          font-size: 2.2rem;
-          z-index: 12;
-          color: RGBA(36, 45, 53, 1);
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          padding: 10px 20px; } }
+          font-weight: 800;
+          background: white; }
+        html .wrapper .image-info .center .image, body .wrapper .image-info .center .image {
+          position: relative;
+          width: 50%;
+          min-height: 350px;
+          max-height: 350px;
+          margin: 0;
+          float: left;
+          overflow: hidden;
+          padding: 0; }
+          html .wrapper .image-info .center .image img, body .wrapper .image-info .center .image img {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%); }
+        html .wrapper .image-info .center #right, body .wrapper .image-info .center #right {
+          float: right; }
+        html .wrapper .image-info .center .info-sec, body .wrapper .image-info .center .info-sec {
+          float: right;
+          width: 50%;
+          min-height: 350px;
+          max-height: 350px; }
+        html .wrapper .image-info .center .srg, body .wrapper .image-info .center .srg {
+          padding: 20px 35px;
+          background: RGBA(255, 250, 237, 1); }
+          html .wrapper .image-info .center .srg h3, body .wrapper .image-info .center .srg h3 {
+            font-size: 3rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center; }
+          html .wrapper .image-info .center .srg p, body .wrapper .image-info .center .srg p {
+            font-size: 1.9rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; }
+        html .wrapper .image-info .center .fry, body .wrapper .image-info .center .fry {
+          padding: 40px 35px;
+          background: RGBA(36, 45, 53, 1);
+          float: left; }
+          html .wrapper .image-info .center .fry h3, body .wrapper .image-info .center .fry h3 {
+            font-size: 3.5rem; }
+          html .wrapper .image-info .center .fry p, body .wrapper .image-info .center .fry p {
+            font-size: 2.2rem;
+            z-index: 12;
+            color: RGBA(255, 250, 250, 1);
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; }
+        html .wrapper .image-info .center .ment, body .wrapper .image-info .center .ment {
+          padding: 60px 35px;
+          background: RGBA(213, 100, 44, 1); }
+          html .wrapper .image-info .center .ment h3, body .wrapper .image-info .center .ment h3 {
+            font-size: 3.5rem;
+            z-index: 12;
+            color: RGBA(255, 250, 250, 1);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center; }
+          html .wrapper .image-info .center .ment p, body .wrapper .image-info .center .ment p {
+            font-size: 2.2rem;
+            z-index: 12;
+            color: RGBA(255, 250, 250, 1);
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; }
+        html .wrapper .image-info .center .time, body .wrapper .image-info .center .time {
+          padding: 30px 35px;
+          background: RGBA(255, 250, 250, 1); }
+          html .wrapper .image-info .center .time h3, body .wrapper .image-info .center .time h3 {
+            font-size: 3rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center; }
+          html .wrapper .image-info .center .time p, body .wrapper .image-info .center .time p {
+            font-size: 1.9rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; }
+        html .wrapper .image-info .center .kirra, body .wrapper .image-info .center .kirra {
+          padding: 40px 35px; }
+          html .wrapper .image-info .center .kirra h3, body .wrapper .image-info .center .kirra h3 {
+            font-size: 3rem;
+            z-index: 12;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center; }
+          html .wrapper .image-info .center .kirra p, body .wrapper .image-info .center .kirra p {
+            font-size: 2.2rem;
+            z-index: 12;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; }
+        html .wrapper .image-info .center .jams, body .wrapper .image-info .center .jams {
+          padding: 50px 35px; }
+          html .wrapper .image-info .center .jams h3, body .wrapper .image-info .center .jams h3 {
+            font-size: 3.5rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center; }
+          html .wrapper .image-info .center .jams p, body .wrapper .image-info .center .jams p {
+            font-size: 2.2rem;
+            z-index: 12;
+            color: RGBA(36, 45, 53, 1);
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            padding: 10px 20px; } }
   @media only screen and (min-width: 850px) {
     html .wrapper .header .nav, body .wrapper .header .nav {
       position: fixed;
